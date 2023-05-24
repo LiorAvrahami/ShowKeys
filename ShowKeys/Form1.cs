@@ -4,7 +4,7 @@ using static KeyboardHook;
 namespace ShowKeys {
     public partial class Form1 : Form {
 
-        int[] INITUATOR_KEYS = { 81, 19 };
+        int[] INITUATOR_KEYS = { 19 };
 
         KeyboardHook keyboardHook;
 
