@@ -28,11 +28,11 @@
             contextMenuStrip1 = new ContextMenuStrip(components);
             exitToolStripMenuItem = new ToolStripMenuItem();
             keyboardSelectToolStripMenuItem = new ToolStripMenuItem();
+            optionsToolStripMenuItem = new ToolStripMenuItem();
+            pauseToolStripMenuItem = new ToolStripMenuItem();
             timer1 = new System.Windows.Forms.Timer(components);
             pictureBox1 = new PictureBox();
             notifyIcon1 = new NotifyIcon(components);
-            optionsToolStripMenuItem = new ToolStripMenuItem();
-            pauseToolStripMenuItem = new ToolStripMenuItem();
             contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -41,21 +41,35 @@
             // 
             contextMenuStrip1.Items.AddRange(new ToolStripItem[] { exitToolStripMenuItem, keyboardSelectToolStripMenuItem, optionsToolStripMenuItem, pauseToolStripMenuItem });
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(181, 114);
+            contextMenuStrip1.Size = new Size(159, 92);
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(180, 22);
+            exitToolStripMenuItem.Size = new Size(158, 22);
             exitToolStripMenuItem.Text = "Exit";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
             // keyboardSelectToolStripMenuItem
             // 
             keyboardSelectToolStripMenuItem.Name = "keyboardSelectToolStripMenuItem";
-            keyboardSelectToolStripMenuItem.Size = new Size(180, 22);
+            keyboardSelectToolStripMenuItem.Size = new Size(158, 22);
             keyboardSelectToolStripMenuItem.Text = "Keyboard Select";
             keyboardSelectToolStripMenuItem.Click += keyboardSelectToolStripMenuItem_Click;
+            // 
+            // optionsToolStripMenuItem
+            // 
+            optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
+            optionsToolStripMenuItem.Size = new Size(158, 22);
+            optionsToolStripMenuItem.Text = "Options";
+            optionsToolStripMenuItem.Click += optionsToolStripMenuItem_Click;
+            // 
+            // pauseToolStripMenuItem
+            // 
+            pauseToolStripMenuItem.Name = "pauseToolStripMenuItem";
+            pauseToolStripMenuItem.Size = new Size(158, 22);
+            pauseToolStripMenuItem.Text = "Pause";
+            pauseToolStripMenuItem.Click += pauseToolStripMenuItem_Click;
             // 
             // timer1
             // 
@@ -66,7 +80,7 @@
             // 
             pictureBox1.Location = new Point(0, -1);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1024, 383);
+            pictureBox1.Size = new Size(1768, 571);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -78,26 +92,12 @@
             notifyIcon1.Text = "notifyIcon1";
             notifyIcon1.Visible = true;
             // 
-            // optionsToolStripMenuItem
-            // 
-            optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            optionsToolStripMenuItem.Size = new Size(180, 22);
-            optionsToolStripMenuItem.Text = "Options";
-            optionsToolStripMenuItem.Click += optionsToolStripMenuItem_Click;
-            // 
-            // pauseToolStripMenuItem
-            // 
-            pauseToolStripMenuItem.Name = "pauseToolStripMenuItem";
-            pauseToolStripMenuItem.Size = new Size(180, 22);
-            pauseToolStripMenuItem.Text = "Pause";
-            pauseToolStripMenuItem.Click += pauseToolStripMenuItem_Click;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(1025, 383);
+            ClientSize = new Size(1768, 573);
             Controls.Add(pictureBox1);
             Name = "Form1";
             Text = "Form1";

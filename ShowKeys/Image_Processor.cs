@@ -11,7 +11,7 @@ namespace ShowKeys {
 
         public Image_Processor(string image_path) {
             if (image_path != null) {
-                this._bitmap = new Bitmap(image_path);
+                 this._bitmap = new Bitmap(image_path);
             } else {
                 this._bitmap = null;
             }
@@ -21,12 +21,12 @@ namespace ShowKeys {
             return invert_rectangles(new List<Point>());
         }
 
-        public unsafe Image invert_single_rectangle(Point point, int square_radius = 30) {
+        public unsafe Image invert_single_rectangle(Point point, int square_radius = 100) {
             List<Point> points = new List<Point> {point};
-            return invert_rectangles(points);
+            return invert_rectangles(points, square_radius);
         }
 
-        public unsafe Image invert_rectangles(List<Point> points, int square_radius = 30) {
+        public unsafe Image invert_rectangles(List<Point> points, int square_radius = 100) {
             bool[,] bool_map = new bool[_bitmap.Width, _bitmap.Height];
             Bitmap ret = new Bitmap(_bitmap);
 

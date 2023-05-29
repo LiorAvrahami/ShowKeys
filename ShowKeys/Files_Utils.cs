@@ -10,7 +10,7 @@ namespace ShowKeys {
     internal class Files_Utils {
         public const string KeyBoardMap_folder_name = "KeyBoardMaps";
 
-        public const string KeyBoardMap_base_image_name = "image.*";
+        public const string KeyBoardMap_base_image_name = "image";
 
         public const string KeyBoard_Point_Map_File = "Map.json";
 
@@ -20,7 +20,7 @@ namespace ShowKeys {
 
         public static string get_image_file(string dir_path) {
             try {
-                string image_file_name = Directory.GetFiles(dir_path, KeyBoardMap_base_image_name)[0];
+                string image_file_name = Directory.GetFiles(dir_path, KeyBoardMap_base_image_name + ".*")[0];
                 return image_file_name;
             } catch {
                 return null;
@@ -37,7 +37,7 @@ namespace ShowKeys {
             string path = Path.Join( KeyBoardMap_folder_name, keyboard_name, KeyBoard_Point_Map_File);
             File.WriteAllText(path, json_to_save);
 
-            string dest_image_path = Path.Join(keyboard_map_path,Path.GetFileName(image_file_path));
+            string dest_image_path = Path.Join(keyboard_map_path, KeyBoardMap_base_image_name + Path.GetExtension(image_file_path));
 
             File.Copy(image_file_path, dest_image_path);
             
